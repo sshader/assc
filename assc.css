@@ -1,7 +1,3 @@
-.debug {
-    border: 2px solid aqua;
-}
-
 .Assc {
     height: 100%;
     width: 100%;
@@ -9,7 +5,7 @@
 }
 
 .Assc-container {
-    margin: 50px;
+    margin: 30px 50px 50px;
     display: flex;
     flex: 1 1 auto;
     min-height: 1px;
@@ -55,13 +51,13 @@ body {
 
 .Description-block {
     border-bottom: 1px solid #a3a5a7;
-    padding: 20px;
+    padding: 15px;
 }
 
 .Description-title {
     font-family: 'Lora', serif;
     font-size: 24px;
-    padding-bottom: 20px;
+    padding-bottom: 12px;
 }
 
 .Description-subtitle {
@@ -70,38 +66,87 @@ body {
     color: #a3a5a7;
 }
 
+.Button-unavailable:hover {
+    cursor: not-allowed;
+}
+
 .ColorPicker-text {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    position: absolute;
 }
 
 .ColorPicker-buttons {
     display: flex;
-    height: 30px;
+    height: 50px;
     flex: 1 1 auto;
+}
+
+.ColorPicker-buttons .Button-inner {
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    margin: 4px 4px;
 }
 
 .ColorPicker-buttons .Button {
-    background-color: blue;
+    background-color: white;
     border-radius: 50%;
-    height: 30px;
-    width: 30px;
-    margin-right: 10px;
+    height: 32px;
+    width: 32px;
+    margin: 20px 10px 0 0;
+    border: solid 1px transparent;
 }
 
+.ColorPicker-buttons .Button-available {
+    border-color: #808284;
+}
+
+.ColorPicker-buttons .Button:hover {
+    border-color: #a3a5a7;
+}
+
+.ColorPicker-buttons .Button-unavailable:hover .Button-inner {
+    background-color: #a3a5a7;  
+}
+
+.ColorPicker-buttons .Button-1 .Button-inner {
+    background-color: #ff85a2;
+}
+
+.ColorPicker-buttons .Button-2 .Button-inner {
+    background-color: #ff9eb5;
+}
+
+.ColorPicker-buttons .Button-3 .Button-inner {
+    background-color: #ffd1dc;
+}
+
+.ColorPicker-buttons .Button-2 + div + div:before {
+    content: "Software Engineer"
+}
+
+.ColorPicker-buttons .Button-1:hover + div:before {
+    content: "Mathematician\2014SOLD OUT"
+}
+
+.ColorPicker-buttons .Button-3:hover + div + div + div:before {
+    content: "Film Enthusiast\2014SOLD OUT"
+}
 .Description-rest {
     flex: 1 1 auto;
     overflow-y: auto;
-    padding: 20px;
+    padding: 10px;
 }
 
 .SizePicker-text {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     font-style: italic;
     color: #808284;
+    position: absolute; 
 }
 
 .SizePicker-buttons {
@@ -110,17 +155,68 @@ body {
 }
 
 .SizePicker-buttons .Button {
-    border: 1px solid #a3a5a7;
-    height: 40px;
-    width: 40px;
-    margin: 5px;
+    background-color: #fafafa;
+    height: 30px;
+    width: 30px;
+    margin: 20px 5px 5px 0px;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+}
+
+.SizePicker-buttons .Button-unavailable .ButtonContent {
+    text-decoration: line-through;
+    color: #a3a5a7;
+}
+
+.SizePicker-buttons .Button-available .ButtonContent {
+    color: #808284;
+}
+
+.SizePicker-buttons .Button-1:hover + div:before {
+    content: "25\2014 Coming 03/12/21";
+}
+
+.SizePicker-buttons .Button-2:hover + div + div:before {
+    content: "24\2014 Coming 03/12/20";
+}
+
+.SizePicker-buttons .Button-3 + div + div + div:before {
+    content: "23\2014 Available now";
+}
+
+.SizePicker-buttons .Button-4:hover + div + div + div + div:before {
+    content: "22\2014 Discontinued";
+}
+
+
+.SizePicker-buttons .Button .ButtonContent {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.SizePicker-buttons .Button-available {
+    border-color: #a3a5a7;
+}
+
+.SizePicker-buttons .Button:hover {
+    border-color: #dfe0e1;
 }
 
 .SizePicker-guide {
+    margin: 8px 0;
+}
+
+.SizePicker-guide > a {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    margin: 15px 0 15px;
-    color: #a3a5a7;
+    color: #4c4c4b;
+    text-decoration: none;
+}
+
+.SizePicker-guide > a:hover {
+    text-decoration: underline;
 }
 
 .CtaButton {
@@ -130,6 +226,10 @@ body {
     text-align: center;
     padding: 20px 0 20px;
     letter-spacing: 1px;
+}
+
+.CtaButton:hover {
+    background-color: #2e3131;
 }
 
 .Thumbnail {
@@ -161,6 +261,11 @@ body {
 
 .TextWithIcon-text > a {
     color: #a3a5a7;
+    text-decoration: none;
+}
+
+.TextWithIcon-text > a:hover {
+    text-decoration: underline;
 }
 
 
@@ -174,6 +279,6 @@ body {
 .TextWithIcon {
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
     padding-bottom: 5px;
 }
