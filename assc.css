@@ -63,7 +63,7 @@ body {
     min-width: 200px;
     flex: 1 1 auto;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .ImageViewer > input[type=radio] {
@@ -87,6 +87,10 @@ body {
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
+}
+
+.Description-content {
+    overflow-y: auto;
 }
 
 .Description-block {
@@ -121,6 +125,7 @@ body {
     display: flex;
     height: 50px;
     flex: 1 1 auto;
+    position: relative;
 }
 
 .ColorPicker-buttons .Button-inner {
@@ -176,7 +181,6 @@ body {
 }
 .Description-rest {
     flex: 1 1 auto;
-    overflow-y: auto;
     padding: 10px;
 }
 
@@ -192,6 +196,7 @@ body {
 .SizePicker-buttons {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .SizePicker-buttons .Button {
