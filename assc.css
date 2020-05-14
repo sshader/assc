@@ -1,5 +1,34 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
 body {
     margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (orientation: landscape) {
+    .Description {
+        max-width: 450px;
+        padding-left: 30px;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .Assc-container {
+        flex-wrap: wrap;
+    }
+
+    .Images {
+        max-height: 50%;
+    }
+
+    .Description {
+        max-width: 100%;
+        padding-left: 0;
+    }
 }
 
 .Assc {
@@ -13,6 +42,7 @@ body {
     display: flex;
     flex: 1 1 auto;
     min-height: 1px;
+    align-content: flex-start;
 }
 
 .Images {
@@ -54,11 +84,9 @@ body {
 
 .Description {
     min-width: 300px;
-    max-width: 450px;
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
-    padding-left: 30px;
 }
 
 .Description-block {
