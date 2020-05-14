@@ -100,13 +100,13 @@ body {
 
 .Description-title {
     font-family: 'Lora', serif;
-    font-size: 24px;
+    font-size: 1.75em;
     padding-bottom: 12px;
 }
 
 .Description-subtitle {
     font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
+    font-size: .8em;
     color: #a3a5a7;
 }
 
@@ -116,7 +116,7 @@ body {
 
 .ColorPicker-text {
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
+    font-size: 1em;
     margin-bottom: 8px;
     position: absolute;
 }
@@ -186,7 +186,7 @@ body {
 
 .SizePicker-text {
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
+    font-size: 1em;
     margin-bottom: 8px;
     font-style: italic;
     color: #808284;
@@ -238,7 +238,7 @@ body {
 
 .SizePicker-buttons .Button .ButtonContent {
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
+    font-size: 1em;
 }
 
 .SizePicker-buttons .Button-available {
@@ -255,7 +255,7 @@ body {
 
 .SizePicker-guide > a {
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
+    font-size: 1em;
     color: #4c4c4b;
     text-decoration: none;
 }
@@ -288,13 +288,13 @@ body {
 .Section-title {
     font-family: 'Montserrat', sans-serif;
     color: #a3a5a7;
-    font-size: 14px;
+    font-size: 1em;
     font-variant-caps: all-petite-caps;
 }
 
 .TextWithIcon-icon {
-    height: 15px;
-    width: 15px;
+    height: 1.1em;
+    width: 1.1em;
     fill: #a3a5a7;
     stroke: #a3a5a7;
     padding-right: 5px;
@@ -303,7 +303,7 @@ body {
 .TextWithIcon-text {
     color: #4c4c4b;
     font-family: 'Montserrat', sans-serif;
-    font-size: 11px;
+    font-size: .75em;
 }
 
 .TextWithIcon-text > a {
@@ -319,8 +319,8 @@ body {
 .DescriptionSection-text {
     font-family: 'Montserrat', sans-serif;
     color: #4c4c4b;
-    font-size: 11px;
-    line-height: 13px;
+    font-size: .75em;
+    line-height: 1em;
 }
 
 .TextWithIcon {
