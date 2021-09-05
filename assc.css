@@ -224,11 +224,11 @@ body {
 }
 
 .SizePicker-buttons .Button-2:hover + div + div:before {
-    content: "25\2014 Coming 03/12/21";
+    content: "25\2014 Available now";
 }
 
 .SizePicker-buttons .Button-3 + div + div + div:before {
-    content: "24\2014 Available now";
+    content: "24\2014 Discontinued";
 }
 
 .SizePicker-buttons .Button-4:hover + div + div + div + div:before {
