@@ -1,0 +1,69 @@
+.Button-unavailable:hover {
+    cursor: not-allowed;
+}
+
+.ColorPicker-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    margin-bottom: 8px;
+    position: absolute;
+}
+
+.ColorPicker-buttons {
+    display: flex;
+    height: 50px;
+    flex: 1 1 auto;
+    position: relative;
+}
+
+.ColorPicker-buttons .Button-inner {
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    margin: 4px 4px;
+}
+
+.ColorPicker-buttons .Button {
+    background-color: white;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    margin: 20px 10px 0 0;
+    border: solid 1px transparent;
+}
+
+.ColorPicker-buttons .Button-available {
+    border-color: #808284;
+}
+
+.ColorPicker-buttons .Button:hover {
+    border-color: #a3a5a7;
+}
+
+.ColorPicker-buttons .Button-unavailable:hover .Button-inner {
+    background-color: #a3a5a7;  
+}
+
+.ColorPicker-buttons .Button-1 .Button-inner {
+    background-color: #ff85a2;
+}
+
+.ColorPicker-buttons .Button-2 .Button-inner {
+    background-color: #ff9eb5;
+}
+
+.ColorPicker-buttons .Button-3 .Button-inner {
+    background-color: #ffd1dc;
+}
+
+.ColorPicker-buttons .Button-2 + div + div:before {
+    content: "Software Engineer"
+}
+
+.ColorPicker-buttons .Button-1:hover + div:before {
+    content: "Mathematician\2014SOLD OUT"
+}
+
+.ColorPicker-buttons .Button-3:hover + div + div + div:before {
+    content: "Film Enthusiast\2014SOLD OUT"
+}

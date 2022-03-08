@@ -1,69 +1,195 @@
-html {
-    height: 100%;
-    width: 100%;
+@charset "UTF-8";
+.Button-unavailable:hover {
+  cursor: not-allowed;
 }
 
-body {
-    margin: 0;
-    height: 100%;
-    width: 100%;
+.ColorPicker-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  margin-bottom: 8px;
+  position: absolute;
 }
 
-@media screen and (orientation: landscape) {
-    .Description {
-        max-width: 450px;
-        padding-left: 30px;
-    }
+.ColorPicker-buttons {
+  display: flex;
+  height: 50px;
+  flex: 1 1 auto;
+  position: relative;
 }
 
-@media screen and (orientation: portrait) {
-    .Assc-container {
-        flex-wrap: wrap;
-    }
-
-    .Images {
-        max-height: 50%;
-    }
-
-    .Description {
-        max-width: 100%;
-        padding-left: 0;
-    }
+.ColorPicker-buttons .Button-inner {
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  margin: 4px 4px;
 }
 
-.Assc {
-    height: 100%;
-    width: 100%;
-    display: flex;
+.ColorPicker-buttons .Button {
+  background-color: white;
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+  margin: 20px 10px 0 0;
+  border: solid 1px transparent;
 }
 
-.Assc-container {
-    margin: 30px 50px 50px;
-    display: flex;
-    flex: 1 1 auto;
-    min-height: 1px;
-    align-content: flex-start;
+.ColorPicker-buttons .Button-available {
+  border-color: #808284;
+}
+
+.ColorPicker-buttons .Button:hover {
+  border-color: #a3a5a7;
+}
+
+.ColorPicker-buttons .Button-unavailable:hover .Button-inner {
+  background-color: #a3a5a7;
+}
+
+.ColorPicker-buttons .Button-1 .Button-inner {
+  background-color: #ff85a2;
+}
+
+.ColorPicker-buttons .Button-2 .Button-inner {
+  background-color: #ff9eb5;
+}
+
+.ColorPicker-buttons .Button-3 .Button-inner {
+  background-color: #ffd1dc;
+}
+
+.ColorPicker-buttons .Button-2 + div + div:before {
+  content: "Software Engineer";
+}
+
+.ColorPicker-buttons .Button-1:hover + div:before {
+  content: "Mathematician—SOLD OUT";
+}
+
+.ColorPicker-buttons .Button-3:hover + div + div + div:before {
+  content: "Film Enthusiast—SOLD OUT";
+}
+
+.CtaButton {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  background-color: #4c4c4b;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 20px 0 20px;
+  letter-spacing: 1px;
+}
+
+.CtaButton:hover {
+  background-color: #2e3131;
+}
+
+.Description-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+}
+
+.Description {
+  margin: 30px 50px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Description-title {
+  font-family: "Lora", serif;
+  font-size: 1.75em;
+  padding-bottom: 12px;
+}
+
+.Description-content {
+  overflow-y: auto;
+  flex: 1 1 auto;
+}
+
+.Description-block {
+  border-bottom: 1px solid #a3a5a7;
+  padding: 15px;
+}
+
+.Section-title {
+  font-family: "Montserrat", sans-serif;
+  color: #a3a5a7;
+  font-size: 1em;
+  font-variant-caps: all-petite-caps;
+}
+
+.TextWithIcon-icon {
+  height: 1.1em;
+  width: 1.1em;
+  fill: #a3a5a7;
+  stroke: #a3a5a7;
+  padding-right: 5px;
+}
+
+.TextWithIcon-text {
+  color: #4c4c4b;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75em;
+}
+
+.TextWithIcon-text > a {
+  color: #a3a5a7;
+  text-decoration: none;
+}
+
+.TextWithIcon-text > a:hover {
+  text-decoration: underline;
+}
+
+.DescriptionSection-text {
+  font-family: "Montserrat", sans-serif;
+  color: #4c4c4b;
+  font-size: 0.75em;
+  line-height: 1em;
+}
+
+.TextWithIcon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.Images-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .Images {
-    min-width: 300px;
-    flex: 1 1 auto;
-    display: flex;
+  margin: 30px 0px 30px 50px;
+  display: flex;
+  flex: 0 1 auto;
+  min-width: 1px;
 }
 
 .ImagePicker {
-    width: 100px;
-    flex: 0 0 auto;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
+  width: 100px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  flex: 0 0 auto;
+}
+
+.Thumbnail {
+  width: 100px;
 }
 
 .ImageViewer {
-    min-width: 200px;
-    flex: 1 1 auto;
-    display: flex;
-    align-items: flex-start;
+  flex: 1 1 auto;
+  min-width: 1px;
+}
+
+.ImageViewer-fullImage {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .ImageViewer > input[type=radio] {
@@ -74,258 +200,114 @@ body {
   display: none;
 }
 
-
 .ImageViewer > input[type=radio]:checked + .ImageViewer-fullImage {
-    display: block;
-    object-fit: contain;
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.Description {
-    min-width: 300px;
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
-}
-
-.Description-content {
-    overflow-y: auto;
-}
-
-.Description-block {
-    border-bottom: 1px solid #a3a5a7;
-    padding: 15px;
-}
-
-.Description-title {
-    font-family: 'Lora', serif;
-    font-size: 1.75em;
-    padding-bottom: 12px;
-}
-
-.Description-subtitle {
-    font-family: 'Montserrat', sans-serif;
-    font-size: .8em;
-    color: #a3a5a7;
-}
-
-.Button-unavailable:hover {
-    cursor: not-allowed;
-}
-
-.ColorPicker-text {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1em;
-    margin-bottom: 8px;
-    position: absolute;
-}
-
-.ColorPicker-buttons {
-    display: flex;
-    height: 50px;
-    flex: 1 1 auto;
-    position: relative;
-}
-
-.ColorPicker-buttons .Button-inner {
-    border-radius: 50%;
-    height: 24px;
-    width: 24px;
-    margin: 4px 4px;
-}
-
-.ColorPicker-buttons .Button {
-    background-color: white;
-    border-radius: 50%;
-    height: 32px;
-    width: 32px;
-    margin: 20px 10px 0 0;
-    border: solid 1px transparent;
-}
-
-.ColorPicker-buttons .Button-available {
-    border-color: #808284;
-}
-
-.ColorPicker-buttons .Button:hover {
-    border-color: #a3a5a7;
-}
-
-.ColorPicker-buttons .Button-unavailable:hover .Button-inner {
-    background-color: #a3a5a7;  
-}
-
-.ColorPicker-buttons .Button-1 .Button-inner {
-    background-color: #ff85a2;
-}
-
-.ColorPicker-buttons .Button-2 .Button-inner {
-    background-color: #ff9eb5;
-}
-
-.ColorPicker-buttons .Button-3 .Button-inner {
-    background-color: #ffd1dc;
-}
-
-.ColorPicker-buttons .Button-2 + div + div:before {
-    content: "Software Engineer"
-}
-
-.ColorPicker-buttons .Button-1:hover + div:before {
-    content: "Mathematician\2014SOLD OUT"
-}
-
-.ColorPicker-buttons .Button-3:hover + div + div + div:before {
-    content: "Film Enthusiast\2014SOLD OUT"
-}
-.Description-rest {
-    flex: 1 1 auto;
-    padding: 10px;
+  display: block;
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .SizePicker-text {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1em;
-    margin-bottom: 8px;
-    font-style: italic;
-    color: #808284;
-    position: absolute; 
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  margin-bottom: 8px;
+  font-style: italic;
+  color: #808284;
+  position: absolute;
 }
 
 .SizePicker-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
 }
 
 .SizePicker-buttons .Button {
-    background-color: #fafafa;
-    height: 30px;
-    width: 30px;
-    margin: 20px 5px 5px 0px;
-    display: flex;  
-    align-items: center;
-    justify-content: center;
-    border: 1px solid transparent;
+  background-color: #fafafa;
+  height: 30px;
+  width: 30px;
+  margin: 20px 5px 5px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
 }
 
 .SizePicker-buttons .Button-unavailable .ButtonContent {
-    text-decoration: line-through;
-    color: #a3a5a7;
+  text-decoration: line-through;
+  color: #a3a5a7;
 }
 
 .SizePicker-buttons .Button-available .ButtonContent {
-    color: #808284;
+  color: #808284;
 }
 
 .SizePicker-buttons .Button-1:hover + div:before {
-    content: "26\2014 Coming 03/12/22";
+  content: "28—Coming 03/12/24";
 }
 
 .SizePicker-buttons .Button-2:hover + div + div:before {
-    content: "25\2014 Available now";
+  content: "27—Coming 03/12/23";
 }
 
-.SizePicker-buttons .Button-3 + div + div + div:before {
-    content: "24\2014 Discontinued";
+.SizePicker-buttons .Button-3:hover + div + div + div:before {
+  content: "26—Coming 03/12/22";
 }
 
-.SizePicker-buttons .Button-4:hover + div + div + div + div:before {
-    content: "23\2014 Discontinued";
+.SizePicker-buttons .Button-4 + div + div + div + div:before {
+  content: "25—Available now";
 }
-
 
 .SizePicker-buttons .Button .ButtonContent {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1em;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
 }
 
 .SizePicker-buttons .Button-available {
-    border-color: #a3a5a7;
+  border-color: #a3a5a7;
 }
 
 .SizePicker-buttons .Button:hover {
-    border-color: #dfe0e1;
+  border-color: #dfe0e1;
 }
 
 .SizePicker-guide {
-    margin: 8px 0;
+  margin: 8px 0;
 }
 
 .SizePicker-guide > a {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1em;
-    color: #4c4c4b;
-    text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  color: #4c4c4b;
+  text-decoration: none;
 }
 
 .SizePicker-guide > a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-.CtaButton {
-    display: block;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #4c4c4b;
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    padding: 20px 0 20px;
-    letter-spacing: 1px;
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
 }
 
-.CtaButton:hover {
-    background-color: #2e3131;
+.Assc {
+  height: 100%;
+  width: 100%;
+  display: flex;
 }
 
-.Thumbnail {
-    width: 100px;
-    min-height: 1px;
-    display: flex;
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
 }
 
-.Section-title {
-    font-family: 'Montserrat', sans-serif;
-    color: #a3a5a7;
-    font-size: 1em;
-    font-variant-caps: all-petite-caps;
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
 }
 
-.TextWithIcon-icon {
-    height: 1.1em;
-    width: 1.1em;
-    fill: #a3a5a7;
-    stroke: #a3a5a7;
-    padding-right: 5px;
-}
-
-.TextWithIcon-text {
-    color: #4c4c4b;
-    font-family: 'Montserrat', sans-serif;
-    font-size: .75em;
-}
-
-.TextWithIcon-text > a {
-    color: #a3a5a7;
-    text-decoration: none;
-}
-
-.TextWithIcon-text > a:hover {
-    text-decoration: underline;
-}
-
-
-.DescriptionSection-text {
-    font-family: 'Montserrat', sans-serif;
-    color: #4c4c4b;
-    font-size: .75em;
-    line-height: 1em;
-}
-
-.TextWithIcon {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-bottom: 5px;
-}
+/*# sourceMappingURL=assc.css.map */

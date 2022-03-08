@@ -1,0 +1,72 @@
+.Description-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+}
+
+.Description {
+    margin: 30px 50px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Description-title {
+    font-family: 'Lora', serif;
+    font-size: 1.75em;
+    padding-bottom: 12px;
+}
+
+.Description-content {
+    overflow-y: auto;
+    flex: 1 1 auto;
+}
+
+.Description-block {
+    border-bottom: 1px solid #a3a5a7;
+    padding: 15px;
+}
+
+.Section-title {
+    font-family: 'Montserrat', sans-serif;
+    color: #a3a5a7;
+    font-size: 1em;
+    font-variant-caps: all-petite-caps;
+}
+
+.TextWithIcon-icon {
+    height: 1.1em;
+    width: 1.1em;
+    fill: #a3a5a7;
+    stroke: #a3a5a7;
+    padding-right: 5px;
+}
+
+.TextWithIcon-text {
+    color: #4c4c4b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .75em;
+}
+
+.TextWithIcon-text > a {
+    color: #a3a5a7;
+    text-decoration: none;
+}
+
+.TextWithIcon-text > a:hover {
+    text-decoration: underline;
+}
+
+.DescriptionSection-text {
+    font-family: 'Montserrat', sans-serif;
+    color: #4c4c4b;
+    font-size: .75em;
+    line-height: 1em;
+}
+
+.TextWithIcon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 5px;
+}

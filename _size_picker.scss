@@ -1,0 +1,79 @@
+.SizePicker-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    margin-bottom: 8px;
+    font-style: italic;
+    color: #808284;
+    position: absolute; 
+}
+
+.SizePicker-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.SizePicker-buttons .Button {
+    background-color: #fafafa;
+    height: 30px;
+    width: 30px;
+    margin: 20px 5px 5px 0px;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+}
+
+.SizePicker-buttons .Button-unavailable .ButtonContent {
+    text-decoration: line-through;
+    color: #a3a5a7;
+}
+
+.SizePicker-buttons .Button-available .ButtonContent {
+    color: #808284;
+}
+
+.SizePicker-buttons .Button-1:hover + div:before {
+    content: "28\2014 Coming 03/12/24";
+}
+
+.SizePicker-buttons .Button-2:hover + div + div:before {
+    content: "27\2014 Coming 03/12/23";
+}
+
+.SizePicker-buttons .Button-3:hover + div + div + div:before {
+    content: "26\2014 Coming 03/12/22";
+}
+
+.SizePicker-buttons .Button-4 + div + div + div + div:before {
+    content: "25\2014 Available now";
+}
+
+
+.SizePicker-buttons .Button .ButtonContent {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+}
+
+.SizePicker-buttons .Button-available {
+    border-color: #a3a5a7;
+}
+
+.SizePicker-buttons .Button:hover {
+    border-color: #dfe0e1;
+}
+
+.SizePicker-guide {
+    margin: 8px 0;
+}
+
+.SizePicker-guide > a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    color: #4c4c4b;
+    text-decoration: none;
+}
+
+.SizePicker-guide > a:hover {
+    text-decoration: underline;
+}
