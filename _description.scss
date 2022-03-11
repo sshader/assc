@@ -1,14 +1,40 @@
 .Description-container {
-    width: 50%;
-    height: 100%;
     display: flex;
 }
 
 .Description {
-    margin: 30px 50px;
     max-width: 500px;
     display: flex;
     flex-direction: column;
+}
+
+.Description-content {
+    flex: 1 1 auto;
+}
+
+@media screen and (orientation: portrait) {
+    .Description-container {
+        width: 100%;
+    }
+
+    .Description {
+        margin: 0px 50px 50px 50px;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .Description-container {
+        width: 50%;
+        height: 100%;
+    }
+
+    .Description {
+        margin: 30px 50px;
+    }
+
+    .Description-content {
+        overflow-y: auto;
+    }    
 }
 
 .Description-title {
@@ -21,11 +47,6 @@
     font-family: 'Montserrat', sans-serif;
     font-size: .8em;
     color: #a3a5a7;
-}
-
-.Description-content {
-    overflow-y: auto;
-    flex: 1 1 auto;
 }
 
 .Description-block {

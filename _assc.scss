@@ -17,9 +17,17 @@ body {
     display: flex;
 }
 
+@media screen and (orientation: portrait) {
+    .Assc {
+        flex-direction: column;
+        overflow-y: auto;
+    }
+}
+
 ::-webkit-scrollbar {
     -webkit-appearance: none;
     width: 7px;
+    height: 7px;
 }
   
 ::-webkit-scrollbar-thumb {
