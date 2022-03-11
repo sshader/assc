@@ -5,8 +5,8 @@
 
 .ColorPicker-text {
   font-family: "Montserrat", sans-serif;
-  font-size: 1em;
-  margin-bottom: 8px;
+  font-size: 14px;
+  letter-spacing: 0.25px;
   position: absolute;
 }
 
@@ -72,6 +72,7 @@
 .CtaButton {
   display: block;
   font-family: "Montserrat", sans-serif;
+  font-size: 16px;
   background-color: #4c4c4b;
   color: white;
   text-decoration: none;
@@ -123,13 +124,14 @@
 }
 .Description-title {
   font-family: "Lora", serif;
-  font-size: 1.75em;
-  padding-bottom: 12px;
+  font-size: 25px;
+  letter-spacing: 0px;
 }
 
 .Description-subtitle {
   font-family: "Montserrat", sans-serif;
-  font-size: 0.8em;
+  font-size: 15px;
+  letter-spacing: 0.1px;
   color: #a3a5a7;
 }
 
@@ -140,9 +142,10 @@
 
 .Section-title {
   font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  letter-spacing: 1.25px;
+  font-variant-caps: all-small-caps;
   color: #a3a5a7;
-  font-size: 1em;
-  font-variant-caps: all-petite-caps;
 }
 
 .TextWithIcon-icon {
@@ -156,7 +159,8 @@
 .TextWithIcon-text {
   color: #4c4c4b;
   font-family: "Montserrat", sans-serif;
-  font-size: 0.75em;
+  font-size: 12px;
+  letter-spacing: 0.4px;
 }
 
 .TextWithIcon-text > a {
@@ -170,9 +174,9 @@
 
 .DescriptionSection-text {
   font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.4px;
   color: #4c4c4b;
-  font-size: 0.75em;
-  line-height: 1em;
 }
 
 .TextWithIcon {
@@ -193,6 +197,7 @@
 }
 
 .ImagePicker {
+  flex: 0 0 auto;
   display: flex;
 }
 
@@ -261,8 +266,8 @@
 
 .SizePicker-text {
   font-family: "Montserrat", sans-serif;
-  font-size: 1em;
-  margin-bottom: 8px;
+  font-size: 14px;
+  letter-spacing: 0.25px;
   font-style: italic;
   color: #808284;
   position: absolute;
@@ -329,7 +334,8 @@
 
 .SizePicker-guide > a {
   font-family: "Montserrat", sans-serif;
-  font-size: 1em;
+  font-size: 14px;
+  letter-spacing: 0.25px;
   color: #4c4c4b;
   text-decoration: none;
 }
@@ -349,6 +355,7 @@ body {
   height: 100%;
   width: 100%;
   display: flex;
+  position: absolute;
 }
 
 @media screen and (orientation: portrait) {

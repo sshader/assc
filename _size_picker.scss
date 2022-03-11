@@ -1,7 +1,7 @@
+@use "fonts";
+
 .SizePicker-text {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1em;
-    margin-bottom: 8px;
+    @include fonts.Body-1;
     font-style: italic;
     color: #808284;
     position: absolute; 
@@ -68,8 +68,7 @@
 }
 
 .SizePicker-guide > a {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1em;
+    @include fonts.Body-1;
     color: #4c4c4b;
     text-decoration: none;
 }

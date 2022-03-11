@@ -1,0 +1,30 @@
+@mixin Headline {
+    font-family: 'Lora', serif;
+    font-size: 25px;
+    letter-spacing: 0px;
+}
+
+@mixin Subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    letter-spacing: .1px;
+}
+
+@mixin Body-1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    letter-spacing: .25px;
+}
+
+@mixin Body-2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    letter-spacing: .4px;
+}
+
+@mixin Section {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1.25px;
+    font-variant-caps: all-small-caps;
+}

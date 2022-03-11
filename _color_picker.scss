@@ -1,11 +1,11 @@
+@use "fonts";
+
 .Button-unavailable:hover {
     cursor: not-allowed;
 }
 
 .ColorPicker-text {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1em;
-    margin-bottom: 8px;
+    @include fonts.Body-1;
     position: absolute;
 }
 

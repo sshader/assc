@@ -1,3 +1,5 @@
+@use "fonts";
+
 .Description-container {
     display: flex;
 }
@@ -38,14 +40,11 @@
 }
 
 .Description-title {
-    font-family: 'Lora', serif;
-    font-size: 1.75em;
-    padding-bottom: 12px;
+    @include fonts.Headline
 }
 
 .Description-subtitle {
-    font-family: 'Montserrat', sans-serif;
-    font-size: .8em;
+    @include fonts.Subtitle;
     color: #a3a5a7;
 }
 
@@ -55,10 +54,8 @@
 }
 
 .Section-title {
-    font-family: 'Montserrat', sans-serif;
+    @include fonts.Section;
     color: #a3a5a7;
-    font-size: 1em;
-    font-variant-caps: all-petite-caps;
 }
 
 .TextWithIcon-icon {
@@ -71,8 +68,7 @@
 
 .TextWithIcon-text {
     color: #4c4c4b;
-    font-family: 'Montserrat', sans-serif;
-    font-size: .75em;
+    @include fonts.Body-2;
 }
 
 .TextWithIcon-text > a {
@@ -85,10 +81,8 @@
 }
 
 .DescriptionSection-text {
-    font-family: 'Montserrat', sans-serif;
+    @include fonts.Body-2;
     color: #4c4c4b;
-    font-size: .75em;
-    line-height: 1em;
 }
 
 .TextWithIcon {
