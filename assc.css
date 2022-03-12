@@ -307,17 +307,18 @@
   content: "27—Coming 03/12/23";
 }
 
-.SizePicker-buttons .Button-3:hover + div + div + div:before {
-  content: "26—Coming 03/12/22";
+.SizePicker-buttons .Button-3 + div + div + div:before {
+  content: "26—Available now";
 }
 
-.SizePicker-buttons .Button-4 + div + div + div + div:before {
-  content: "25—Available now";
+.SizePicker-buttons .Button-4:hover + div + div + div + div:before {
+  content: "25—Discontinued";
 }
 
 .SizePicker-buttons .Button .ButtonContent {
   font-family: "Montserrat", sans-serif;
-  font-size: 1em;
+  font-size: 14px;
+  letter-spacing: 0.25px;
 }
 
 .SizePicker-buttons .Button-available {
