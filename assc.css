@@ -303,11 +303,11 @@
   content: "28—Coming 03/12/24";
 }
 
-.SizePicker-buttons .Button-2:hover + div + div:before {
+.SizePicker-buttons .Button-2 + div + div:before {
   content: "27—Available now";
 }
 
-.SizePicker-buttons .Button-3 + div + div + div:before {
+.SizePicker-buttons .Button-3:hover + div + div + div:before {
   content: "26—Discontinued";
 }
 

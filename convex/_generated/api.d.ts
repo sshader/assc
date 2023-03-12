@@ -10,6 +10,9 @@
  */
 
 import type { ApiFromModules } from "convex/api";
+import type * as functions from "../functions";
+import type * as http from "../http";
+import type * as lib_honoWithConvex from "../lib/honoWithConvex";
 
 /**
  * A type describing your app's public Convex API.
@@ -20,4 +23,8 @@ import type { ApiFromModules } from "convex/api";
  * This type should be used with type-parameterized classes like
  * `ConvexReactClient` to create app-specific types.
  */
-export type API = ApiFromModules<{}>;
+export type API = ApiFromModules<{
+  functions: typeof functions;
+  http: typeof http;
+  "lib/honoWithConvex": typeof lib_honoWithConvex;
+}>;
