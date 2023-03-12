@@ -304,11 +304,11 @@
 }
 
 .SizePicker-buttons .Button-2:hover + div + div:before {
-  content: "27—Coming 03/12/23";
+  content: "27—Available now";
 }
 
 .SizePicker-buttons .Button-3 + div + div + div:before {
-  content: "26—Available now";
+  content: "26—Discontinued";
 }
 
 .SizePicker-buttons .Button-4:hover + div + div + div + div:before {
