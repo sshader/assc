@@ -9,12 +9,12 @@
  */
 import {
     HttpRouter,
-    PublicHttpEndpoint,
+    PublicHttpAction,
     RoutableMethod,
     ROUTABLE_HTTP_METHODS,
 } from "convex/server";
 import { Hono } from "hono";
-import { httpEndpoint, HttpEndpointCtx } from "../_generated/server";
+import { httpAction, ActionCtx } from "../_generated/server";
 
 /**
  * Hono uses the `FetchEvent` type internally, which has to do with service workers
@@ -28,16 +28,18 @@ declare global {
 
 /**
  * A type representing a Hono app with `c.env` containing Convex's
- * `HttpEndpointCtx` (e.g. `c.env.runQuery` is valid).
+ * `HttpActionCtx` (e.g. `c.env.runQuery` is valid).
  */
-export type HonoWithConvex = Hono<{ Bindings: HttpEndpointCtx; }>;
+export type HonoWithConvex = Hono<{ Bindings: {
+    [Name in keyof ActionCtx]: ActionCtx[Name]
+  } }>;
 
 /**
  * An implementation of the Convex `HttpRouter` that integrates with Hono by
  * overridding `getRoutes` and `lookup`.
  *
  * This defers all routing and request handling to the provided Hono app, and
- * passes along the Convex `HttpEndpointCtx` to the Hono handlers as part of
+ * passes along the Convex `HttpActionCtx` to the Hono handlers as part of
  * `env`.
  *
  * It will attempt to log each request with the most specific Hono route it can
@@ -62,15 +64,15 @@ export type HonoWithConvex = Hono<{ Bindings: HttpEndpointCtx; }>;
  */
 export class HttpRouterWithHono extends HttpRouter {
     private _app: HonoWithConvex;
-    private _handler: PublicHttpEndpoint<any>;
+    private _handler: PublicHttpAction;
     private _handlerInfoCache: Map<any, { method: RoutableMethod; path: string; }>;
 
     constructor(app: HonoWithConvex) {
         super();
         this._app = app;
-        // Single Convex httpEndpoint handler that just forwards the request to the
+        // Single Convex httpAction handler that just forwards the request to the
         // Hono framework
-        this._handler = httpEndpoint(async (ctx, request: Request) => {
+        this._handler = httpAction(async (ctx, request: Request) => {
             return await app.fetch(request, ctx);
         });
         this._handlerInfoCache = new Map();
@@ -129,7 +131,7 @@ export class HttpRouterWithHono extends HttpRouter {
      * http.lookup("/profile/abc", "GET") // returns [getProfile, "GET", "/profile/*"]
      *```
      *
-     * @returns - a tuple [PublicHttpEndpoint, method, path] or null.
+     * @returns - a tuple [PublicHttpAction, method, path] or null.
      */
     lookup = (path: string, method: RoutableMethod | "HEAD") => {
         const match = this._app.router.match(method, path);
@@ -138,7 +140,7 @@ export class HttpRouterWithHono extends HttpRouter {
         }
         // There might be multiple handlers for a route (in the case of middleware),
         // so choose the most specific one for the purposes of logging
-        const mostSpecificHandler = match.handlers[match.handlers.length - 1];
+        const mostSpecificHandler = match[match.length - 1];
         // On the first request let's populate a lookup from handler to info
         if (this._handlerInfoCache.size === 0) {
             for (const r of this._app.routes) {

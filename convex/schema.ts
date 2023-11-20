@@ -1,9 +1,10 @@
-import { s, defineSchema, defineTable } from "convex/schema";
+import { defineSchema, defineTable } from "convex/server";
+import { v} from "convex/values"
 
 const schema = defineSchema({
     "files": defineTable({
-        name: s.string(),
-        storageId: s.string()
+        name: v.string(),
+        storageId: v.string()
     })
 });
 
