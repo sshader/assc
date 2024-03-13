@@ -14,6 +14,9 @@ app.use(
 );
 
 app.post("/uploadFile", async c => {
+    if (process.env.UPLOAD_SECRET !== c.req.header("X-Assc-Upload-Secret")) {
+        return c.text("Upload not allowed")
+    }
     const fileName = c.req.query("name")!;
     const storageId = await c.env.storage.store(await c.req.blob());
     await c.env.runMutation(api.functions.updateFile, { storageId, name: fileName });
