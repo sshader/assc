@@ -1,7 +1,8 @@
 {
   "dependencies": {
-    "convex": "^1.5.1",
-    "hono": "^3.0.3",
+    "convex": "^1.10.0",
+    "hono": "^3.11.2",
+    "sass": "^1.71.1",
     "strip-ansi": "^7.0.1",
     "typescript": "^4.9.5"
   }

@@ -103,7 +103,6 @@
   .Description-container {
     width: 100%;
   }
-
   .Description {
     margin: 0px 50px 50px 50px;
   }
@@ -113,11 +112,9 @@
     width: 50%;
     height: 100%;
   }
-
   .Description {
     margin: 30px 50px;
   }
-
   .Description-content {
     overflow-y: auto;
   }
@@ -207,12 +204,10 @@
     height: 100%;
     justify-content: flex-end;
   }
-
   .Images {
     margin: 30px 0px 30px 50px;
     flex-direction: row;
   }
-
   .ImagePicker {
     overflow-x: hidden;
     overflow-y: auto;
@@ -223,12 +218,10 @@
   .Images-container {
     width: 100%;
   }
-
   .Images {
     margin: 30px 50px 30px 50px;
     flex-direction: column-reverse;
   }
-
   .ImagePicker {
     overflow-x: auto;
     overflow-y: hidden;
@@ -300,19 +293,19 @@
 }
 
 .SizePicker-buttons .Button-1:hover + div:before {
-  content: "28—Coming 03/12/24";
+  content: "29—Coming 03/12/25";
 }
 
 .SizePicker-buttons .Button-2 + div + div:before {
-  content: "27—Available now";
+  content: "28—Available now";
 }
 
 .SizePicker-buttons .Button-3:hover + div + div + div:before {
-  content: "26—Discontinued";
+  content: "27—Discontinued";
 }
 
 .SizePicker-buttons .Button-4:hover + div + div + div + div:before {
-  content: "25—Discontinued";
+  content: "26—Discontinued";
 }
 
 .SizePicker-buttons .Button .ButtonContent {
